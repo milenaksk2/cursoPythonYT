@@ -49,7 +49,15 @@ class Pessoa:
         print(f'{self.nome} parou de comer.')
         self.comendo = False
 
+    @classmethod
+    def porAnoDeNascimento(cls, nome, anoNascimento):
+        idade = cls.anoAtual - anoNascimento
+        return cls(nome, idade)
 
     def getAnoNascimento(self):
         return self.anoAtual - self.idade
 
+#p1 = Pessoa.porAnoDeNascimento('Luiz', 1987)
+p1 = Pessoa('Luiz', 32)
+print(p1.nome, p1.idade)
+print(p1.getAnoNascimento())
