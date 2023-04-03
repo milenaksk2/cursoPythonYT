@@ -1,4 +1,6 @@
 from datetime import datetime
+
+from random import randint
 class Pessoa:
 
     anoAtual = int(datetime.strftime(datetime.now(), '%Y'))
@@ -57,7 +59,7 @@ class Pessoa:
     def getAnoNascimento(self):
         return self.anoAtual - self.idade
 
-#p1 = Pessoa.porAnoDeNascimento('Luiz', 1987)
-p1 = Pessoa('Luiz', 32)
-print(p1.nome, p1.idade)
-print(p1.getAnoNascimento())
+    @staticmethod
+    def geraId():
+        rand = randint(10000, 19999)
+        return rand

@@ -7,5 +7,5 @@ p1.pararComer()
 p1.falar('filmes')
 print(p1.getAnoNascimento())
 
-
+print(p1.geraId())
 
